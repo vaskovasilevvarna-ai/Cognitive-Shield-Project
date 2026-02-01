@@ -1,0 +1,23 @@
+[
+  {
+    "id": "ad_hominem",
+    "name": "Ad Hominem",
+    "indicator": "Yellow",
+    "description": "Attacking the person instead of the argument.",
+    "shield_action": "Alert: Personal attack detected. Focus on the data, not the character."
+  },
+  {
+    "id": "straw_man",
+    "name": "Straw Man",
+    "indicator": "Yellow",
+    "description": "Distorting or oversimplifying an opponent's argument to make it easier to attack.",
+    "shield_action": "Alert: Argument distortion. Verify the original statement."
+  },
+  {
+    "id": "emotional_priming",
+    "name": "Emotional Priming",
+    "indicator": "Red",
+    "description": "Using high-intensity fear or anger-inducing language to bypass logic.",
+    "shield_action": "Shield Active: High emotional load detected. Neutralizing tone for objective analysis."
+  }
+]
