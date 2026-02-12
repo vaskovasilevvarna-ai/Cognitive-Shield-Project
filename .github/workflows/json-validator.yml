@@ -1,0 +1,20 @@
+name: JSON Validation Shield
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Validate JSON against Schema
+        uses: ajv-validator/ajv-cli@v5
+        with:
+          spec: 'schema.json'
+          data: 'data/*.json'
