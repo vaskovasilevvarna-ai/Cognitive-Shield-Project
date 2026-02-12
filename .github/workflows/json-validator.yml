@@ -13,8 +13,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Validate JSON against Schema
-        uses: ajv-validator/ajv-cli@v5
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          spec: 'schema.json'
-          data: 'data/*.json'
+          node-version: '20'
+
+      - name: Install AJV Validator
+        run: npm install -g ajv-cli
+
+      - name: Validate JSON against Schema
+        run: ajv validate -s schema.json -d "data/*.json"
