@@ -1,23 +1,50 @@
 [
   {
     "id": "ad_hominem",
-    "name": "Ad Hominem",
+    "name": {
+      "en": "Ad Hominem",
+      "bg": "Лична нападка (Ad Hominem)"
+    },
     "indicator": "Yellow",
-    "description": "Attacking the person instead of the argument.",
-    "shield_action": "Alert: Personal attack detected. Focus on the data, not the character."
+    "description": {
+      "en": "Attacking the person instead of the argument.",
+      "bg": "Атакуване на личността вместо самия аргумент."
+    },
+    "shield_action": {
+      "en": "Alert: Personal attack detected. Focus on the data, not the character.",
+      "bg": "Внимание: Детектирана е лична нападка. Фокусирайте се върху фактите, а не върху личността."
+    }
   },
   {
     "id": "straw_man",
-    "name": "Straw Man",
+    "name": {
+      "en": "Straw Man",
+      "bg": "Сламен човек (Straw Man)"
+    },
     "indicator": "Yellow",
-    "description": "Distorting or oversimplifying an opponent's argument to make it easier to attack.",
-    "shield_action": "Alert: Argument distortion. Verify the original statement."
+    "description": {
+      "en": "Distorting or oversimplifying an opponent's argument to make it easier to attack.",
+      "bg": "Изопачаване или прекомерно опростяване на аргумента на опонента с цел по-лесна атака."
+    },
+    "shield_action": {
+      "en": "Alert: Argument distortion. Verify the original statement.",
+      "bg": "Внимание: Изопачаване на аргумент. Проверете оригиналното твърдение."
+    }
   },
   {
     "id": "emotional_priming",
-    "name": "Emotional Priming",
+    "name": {
+      "en": "Emotional Priming",
+      "bg": "Емоционално програмиране (Emotional Priming)"
+    },
     "indicator": "Red",
-    "description": "Using high-intensity fear or anger-inducing language to bypass logic.",
-    "shield_action": "Shield Active: High emotional load detected. Neutralizing tone for objective analysis."
+    "description": {
+      "en": "Using high-intensity fear or anger-inducing language to bypass logic.",
+      "bg": "Използване на силно въздействащ език, предизвикващ страх или гняв, за заобикаляне на логиката."
+    },
+    "shield_action": {
+      "en": "Shield Active: High emotional load detected. Neutralizing tone for objective analysis.",
+      "bg": "Щитът е активен: Детектиран е висок емоционален заряд. Неутрализиране на тона за обективен анализ."
+    }
   }
 ]
