@@ -18,3 +18,18 @@ Cognitive Shield is an open-source, decentralized layer for the internet designe
 
 ## 📜 Licensing
 This project is licensed under the **AGPLv3**. Any service using this code over a network MUST remain open-source.
+## 🚀 Key Features
+
+### 🚥 Traffic Light Integrity System
+Our UI provides instant cognitive signaling:
+* 🟢 **Green:** High logical integrity; verified source reputation.
+* 🟡 **Yellow:** Presence of emotional priming or minor fallacies. Caution advised.
+* 🔴 **Red:** High manipulation risk; multiple logical fallacies detected.
+
+### 💰 Funding & Source Transparency
+The Shield doesn't just analyze *what* is said, but *who* is paying for it.
+* **Source Disclosure:** Real-time lookup of publisher funding (political/corporate).
+* **Reputation Ledger:** Blockchain-backed history of source reliability.
+
+### 🤖 Multi-Agent Consensus (MAS)
+Leveraging multiple AI agents to deliberate on content, eliminating individual model bias and ensuring a "Democratic" output.
