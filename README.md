@@ -1,35 +1,45 @@
-# Cognitive-Shield-Project
-Decentralized open-source framework for real-time cognitive defense and fallacy detection."
-# Cognitive Shield 🛡️
-**The immune system for the digital age.**
+# 🛡️ Project Cognitive Shield
+> **The First Decentralized Logic-Checking Infrastructure for Democracy**
 
-## 🎯 Vision
-Cognitive Shield is an open-source, decentralized layer for the internet designed to protect users from manipulation, logical fallacies, and emotional priming in real-time.
+![Status](https://img.shields.io/badge/Status-Phase_1_Alpha-green)
+![License](https://img.shields.io/badge/License-AGPL--3.0-blue)
+![Focus](https://img.shields.io/badge/Focus-Democracy_x_AI-red)
+![Community](https://img.shields.io/badge/Community-Open_Source-orange)
 
-## ⚖️ Ethical Charter
-1. **Neutrality:** Focus on *how* something is said, not *who* says it.
-2. **Transparency:** All detection logic is open for public audit.
-3. **Privacy:** Analysis happens locally on the user's device (Edge Computing).
+---
 
-## 🛠 Tech Stack (Planned)
-- Python / Transformers (NLP)
-- AGPL-3.0 License
-- Decentralized Reputation Ledger (Blockchain)
+## 🌐 Vision
+In an era of algorithmic manipulation, **Cognitive Shield** empowers citizens to protect their cognitive sovereignty. We move beyond simple fact-checking to **Logic-Checking**, exposing the mechanisms of manipulation through a transparent, decentralized, and privacy-first ecosystem.
 
-## 📜 Licensing
-This project is licensed under the **AGPLv3**. Any service using this code over a network MUST remain open-source.
-## 🚀 Key Features
+## 🚥 The Traffic Light Integrity System (UI/UX)
+We simplify complex AI analysis into intuitive signals for the everyday user:
+* 🟢 **GREEN:** High logical integrity. Verified source.
+* 🟡 **YELLOW:** Heuristic alert. Emotional priming or minor fallacies detected.
+* 🔴 **RED:** High manipulation risk. Structural fallacies and biased source.
 
-### 🚥 Traffic Light Integrity System
-Our UI provides instant cognitive signaling:
-* 🟢 **Green:** High logical integrity; verified source reputation.
-* 🟡 **Yellow:** Presence of emotional priming or minor fallacies. Caution advised.
-* 🔴 **Red:** High manipulation risk; multiple logical fallacies detected.
+---
 
-### 💰 Funding & Source Transparency
-The Shield doesn't just analyze *what* is said, but *who* is paying for it.
-* **Source Disclosure:** Real-time lookup of publisher funding (political/corporate).
-* **Reputation Ledger:** Blockchain-backed history of source reliability.
+## 🛠️ Advanced Architecture (Roadmap 2026)
 
-### 🤖 Multi-Agent Consensus (MAS)
-Leveraging multiple AI agents to deliberate on content, eliminating individual model bias and ensuring a "Democratic" output.
+| Module | Technology | Objective |
+| :--- | :--- | :--- |
+| **🤖 Multi-Agent Consensus** | **MAS Pipeline** | Eliminates single-model bias through decentralized AI deliberation. |
+| **⛓️ Blockchain Ledger** | **Immutable Audit** | Provides an unchangeable history of logical rules and reputation. |
+| **💰 Money-Trace API** | **Transparency Engine** | Flags source funding (political/corporate) to reveal underlying interests. |
+| **🛡️ Privacy-First** | **Edge Computing** | All initial processing happens locally on the user's device. |
+
+---
+
+## 🚀 Roadmap: The Path to Democracy x AI
+- [x] **Q1: Logic Core Alpha** - Multi-language fallacy database (EN/BG).
+- [ ] **Q2: MAS Integration** - Deploying the Multi-Agent consensus engine.
+- [ ] **Q3: Shield Extension** - Alpha release of the browser integrity tool.
+- [ ] **Q4: Decentralized Reputation** - On-chain validation for source integrity.
+
+---
+
+## 🤝 Join the Mission
+We are looking for **Ethical AI Researchers, UI/UX Designers, and Blockchain Developers**.
+Licensed under **GNU AGPLv3** – because digital safety is a public good.
+
+[View White Paper](./WHITE_PAPER.md) | [Technical Spec](./ARCHITECTURE_SPEC.md)
