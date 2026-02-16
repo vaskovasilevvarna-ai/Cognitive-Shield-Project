@@ -40,3 +40,16 @@ Q1-Q2: Community building and Browser Extension (Alpha).
 Q3: Integration of On-device LLM analysis.
 
 Q4: Public launch and institutional outreach for global education.
+## Technical Architecture: Phase 2 (Roadmap 2026)
+
+### 1. Decentralized Multi-Agent System (MAS)
+We are moving from a single detection script to a **Consensus Engine**. 
+* **Analyst Agents:** Specialized LLMs (Llama/Mistral) identify fallacies.
+* **Adversarial Agent:** Challenges findings to reduce false positives.
+* **Synthesizer:** Outputs the final "Traffic Light" score based on agent agreement.
+
+### 2. Blockchain Reputation & Funding Layer
+To ensure the Shield remains censorship-resistant, we utilize a Decentralized Ledger:
+* **Proof of Logic:** Hash-logging of fallacy detections to prevent "Shadow Editing" of truth.
+* **Follow-the-Money API:** Integration with public transparency databases to flag source interests.
+* **Community Governance:** AGPLv3 contributors can vote on logic-rule updates via the reputation protocol.
