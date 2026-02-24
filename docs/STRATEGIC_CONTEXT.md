@@ -45,4 +45,4 @@ fallacies.json – Bilingual fallacy database (BG/EN).
 
 ARCHITECTURE_SPEC.md – Technical skeleton of the Multi-Agent System.
 
-ETHICAL_GUIDELINES.md – The project's moral constitution.
+SSA_ETHICAL_PROTOCОL.md – The project's moral constitution (English version for Agent training).
