@@ -223,9 +223,15 @@ Its mission is to strengthen **human reasoning**, not replace it.
 
 # License
 
-This project is released under **GNU AGPL v3**.
-
 Digital cognitive security should remain a **public good**.
+
+This project is licensed under the **GNU Affero General Public License v3.0 (AGPL-3.0)**.
+
+The AGPL license ensures that Cognitive Shield remains **free, transparent, and publicly auditable**, even when deployed as a network service.
+
+Any derivative work or deployed system based on this project must also remain open under the same license.
+
+See the **LICENSE** file for full details.
 
 ---
 
@@ -240,15 +246,7 @@ Together we can build the first **open cognitive defense infrastructure**.
 
 Cognitive Shield
 Open Infrastructure for Cognitive Sovereignty
-# License
 
-This project is licensed under the **GNU Affero General Public License v3.0 (AGPL-3.0)**.
-
-The AGPL license ensures that Cognitive Shield remains **free, transparent, and publicly auditable**, even when deployed as a network service.
-
-Any derivative work or deployed system based on this project must also remain open under the same license.
-
-See the **LICENSE** file for full details.
 
 
 
