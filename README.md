@@ -117,6 +117,11 @@ A structured database of manipulation patterns including:
 * emotional exploitation patterns
 * narrative framing structures
 
+## Threat Pattern Library
+
+> **Note:** The Threat Pattern Library is an evolving component of Cognitive Shield.  
+> Patterns will continuously expand and refine as new manipulation strategies are identified and formalized.
+
 ### Transparency Engine
 
 Future integration with funding-trace systems to reveal underlying financial influence in information ecosystems.
