@@ -1,0 +1,3 @@
+"""
+Shared public contracts package.
+"""
