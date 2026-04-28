@@ -1,0 +1,10 @@
+{
+  "message_id": "fixture-clean-001",
+  "raw_text": "The report states that local authorities confirmed the road closure after the storm.",
+  "language": "en",
+  "source_type": "test_fixture",
+  "timestamp": null,
+  "metadata": {
+    "fixture_type": "clean_structured_message"
+  }
+}
