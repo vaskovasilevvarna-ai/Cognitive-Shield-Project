@@ -46,76 +46,91 @@ Preferred format:
 
 ```text
 [sprint-1][area] short action description
+```
+
+Examples:
+
+```text
 [sprint-1][docs] add implementation boundary
 [sprint-1][contracts] refine InputMessage contract
 [sprint-1][tests] add InputMessage unit test
 [sprint-1][shared] add traceability helper
+```
+
 If GitHub UI makes short messages easier, the message may remain simpler, but it should still be role-specific and bounded.
 
-Commit Description Rule
+## Commit Description Rule
 
 When using an extended description, include:
 
-why the change exists;
-what boundary it preserves;
-what it does not implement.
+- why the change exists;
+- what boundary it preserves;
+- what it does not implement.
 
 Example:
+
+```text
 Refine the InputMessage contract as the first bounded Sprint 1 slice.
 
 This does not introduce Message Decomposition Specification (MDS) behavior or downstream pipeline logic.
-Branch Discipline
+```
+
+## Branch Discipline
 
 Sprint 1 preparation continues on the current working branch until a separate branch review is performed.
 
-No merge to main is included in Sprint 1 entry work.
+No merge to `main` is included in Sprint 1 entry work.
 
 A merge decision requires a separate review.
 
-Review Before Commit
+## Review Before Commit
 
 Before each commit, check:
 
-Am I in the correct branch?
-Is this change part of the admitted current step?
-Does this touch only the intended file or small file group?
-Does this introduce implementation logic too early?
-Does this bypass an architecture layer?
-Does this mix responsibilities?
-Is the commit message clear?
-No-Drift Commit Safeguards
+- Am I in the correct branch?
+- Is this change part of the admitted current step?
+- Does this touch only the intended file or small file group?
+- Does this introduce implementation logic too early?
+- Does this bypass an architecture layer?
+- Does this mix responsibilities?
+- Is the commit message clear?
+
+## No-Drift Commit Safeguards
 
 A commit must not:
 
-introduce free-form coding;
-hide policy logic in code;
-convert taxonomy labels into verdict behavior;
-suppress uncertainty or conflict;
-add broad tests before stable contracts;
-implement downstream behavior before admitted;
-mix Education Core behavior into Shield Core;
-introduce UI / UX product decisions;
-merge to main without separate review.
-Recovery Rule
+- introduce free-form coding;
+- hide policy logic in code;
+- convert taxonomy labels into verdict behavior;
+- suppress uncertainty or conflict;
+- add broad tests before stable contracts;
+- implement downstream behavior before admitted;
+- mix Education Core behavior into Shield Core;
+- introduce UI / UX product decisions;
+- merge to `main` without separate review.
+
+## Recovery Rule
 
 If a commit attempt fails in GitHub UI:
 
-stop retrying after one or two attempts;
-refresh the target folder;
-check whether the file was created anyway;
-do not create duplicate files;
-return to the last known clean step;
-continue only after the repository state is clear.
-Closure Criteria
+1. stop retrying after one or two attempts;
+2. refresh the target folder;
+3. check whether the file was created anyway;
+4. do not create duplicate files;
+5. return to the last known clean step;
+6. continue only after the repository state is clear.
+
+## Closure Criteria
 
 Sprint 1 commit discipline is established when:
 
-commit messages are role-specific;
-commits stay small;
-changes remain traceable to the current admitted slice;
-no multi-layer mixed commits are introduced;
-failed UI attempts are recovered without duplicate or drift files.
-Verdict
+- commit messages are role-specific;
+- commits stay small;
+- changes remain traceable to the current admitted slice;
+- no multi-layer mixed commits are introduced;
+- failed UI attempts are recovered without duplicate or drift files.
+
+## Verdict
 
 Sprint 1 must proceed through small, traceable and bounded commits.
 
