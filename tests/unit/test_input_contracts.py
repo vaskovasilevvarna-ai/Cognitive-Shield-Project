@@ -4,6 +4,7 @@ from cognitive_shield.shared.contracts.input_contracts import (
     ClaimUnit,
     FramingUnit,
     InputMessage,
+    RelationObject,
     SurfaceSegment,
 )
 
@@ -70,4 +71,19 @@ def test_framing_unit_can_be_created_with_required_fields() -> None:
     assert framing.text == "This is a framing signal."
     assert framing.framing_mode == "urgency"
     assert framing.source_segment_ids == ["seg-001"]
+
+
+def test_relation_object_can_be_created_with_required_fields() -> None:
+    """RelationObject can be constructed with required relation fields."""
+    relation = RelationObject(
+        relation_id="rel-001",
+        relation_type="supports",
+        from_unit_id="claim-001",
+        to_unit_id="claim-002",
+    )
+
+    assert relation.relation_id == "rel-001"
+    assert relation.relation_type == "supports"
+    assert relation.from_unit_id == "claim-001"
+    assert relation.to_unit_id == "claim-002"
 
