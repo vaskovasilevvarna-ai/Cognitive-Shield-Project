@@ -2,6 +2,7 @@
 
 from cognitive_shield.shared.contracts.input_contracts import (
     ClaimUnit,
+    ContextCarrier,
     FramingUnit,
     InputMessage,
     RelationObject,
@@ -86,4 +87,18 @@ def test_relation_object_can_be_created_with_required_fields() -> None:
     assert relation.relation_type == "supports"
     assert relation.from_unit_id == "claim-001"
     assert relation.to_unit_id == "claim-002"
+
+
+def test_context_carrier_can_be_created_with_default_links() -> None:
+    """ContextCarrier can be constructed with default linked unit IDs."""
+    context = ContextCarrier(
+        context_id="ctx-001",
+        context_type="source_context",
+        value="Minimal contextual information.",
+    )
+
+    assert context.context_id == "ctx-001"
+    assert context.context_type == "source_context"
+    assert context.value == "Minimal contextual information."
+    assert context.linked_unit_ids == []
 
