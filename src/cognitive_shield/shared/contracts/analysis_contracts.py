@@ -1,5 +1,5 @@
 """
-Shared analysis contracts for Sprint 0.
+Shared analysis contracts for Cognitive Shield.
 """
 
 from dataclasses import dataclass, field
