@@ -2,6 +2,7 @@
 
 from cognitive_shield.shared.contracts.input_contracts import (
     ClaimUnit,
+    FramingUnit,
     InputMessage,
     SurfaceSegment,
 )
@@ -54,3 +55,19 @@ def test_claim_unit_can_be_created_with_required_fields() -> None:
     assert claim.claim_type == "assertion"
     assert claim.explicitness == "explicit"
     assert claim.uncertainty_flags == []
+
+
+def test_framing_unit_can_be_created_with_required_fields() -> None:
+    """FramingUnit can be constructed with required framing fields."""
+    framing = FramingUnit(
+        framing_id="frame-001",
+        text="This is a framing signal.",
+        framing_mode="urgency",
+        source_segment_ids=["seg-001"],
+    )
+
+    assert framing.framing_id == "frame-001"
+    assert framing.text == "This is a framing signal."
+    assert framing.framing_mode == "urgency"
+    assert framing.source_segment_ids == ["seg-001"]
+
