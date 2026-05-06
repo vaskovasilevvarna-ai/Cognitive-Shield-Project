@@ -1,5 +1,5 @@
 """
-Shared base type aliases for Sprint 0.
+Shared base type aliases for Cognitive Shield.
 """
 
 from typing import Any
