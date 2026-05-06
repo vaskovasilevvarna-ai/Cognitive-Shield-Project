@@ -1,5 +1,5 @@
 """
-Shared taxonomy contracts for Sprint 0.
+Shared taxonomy contracts for Cognitive Shield.
 """
 
 from dataclasses import dataclass, field
