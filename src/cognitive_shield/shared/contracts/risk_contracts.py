@@ -1,5 +1,5 @@
 """
-Shared risk and governance contracts for Sprint 0.
+Shared risk and governance contracts for Cognitive Shield.
 """
 
 from dataclasses import dataclass, field
