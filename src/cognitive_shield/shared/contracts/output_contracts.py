@@ -1,5 +1,5 @@
 """
-Shared output contracts for Sprint 0.
+Shared output contracts for Cognitive Shield.
 """
 
 from dataclasses import dataclass, field
