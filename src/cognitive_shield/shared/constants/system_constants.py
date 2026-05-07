@@ -1,5 +1,5 @@
 """
-System-wide constants for Sprint 0.
+System-wide constants for Cognitive Shield.
 """
 
 SUPPORTED_LANGUAGES = ("bg", "en")
