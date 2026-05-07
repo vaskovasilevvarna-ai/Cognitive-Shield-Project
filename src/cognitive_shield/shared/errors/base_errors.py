@@ -1,5 +1,5 @@
 """
-Shared base error classes for Sprint 0.
+Shared base error classes for Cognitive Shield.
 """
 
 
@@ -17,5 +17,5 @@ class ContractValidationError(CognitiveShieldError):
 
 class PipelineConfigurationError(CognitiveShieldError):
     """
-    Raised when a Sprint 0 pipeline shell is misconfigured.
+    Raised when a pipeline shell is misconfigured.
     """
