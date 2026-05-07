@@ -1,5 +1,5 @@
 """
-Shared traceability helpers for Sprint 0.
+Shared traceability helpers for Cognitive Shield.
 """
 
 from typing import Any
