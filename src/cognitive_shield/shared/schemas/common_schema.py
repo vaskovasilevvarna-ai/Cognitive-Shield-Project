@@ -1,5 +1,5 @@
 """
-Common schema helpers for Sprint 0.
+Common schema helpers for Cognitive Shield.
 """
 
 from typing import Any
