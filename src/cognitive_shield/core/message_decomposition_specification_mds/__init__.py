@@ -1,3 +1,3 @@
 """
-Message Decomposition Specification (MDS) package placeholder for Sprint 0.
+Message Decomposition Specification (MDS) package for Cognitive Shield.
 """
