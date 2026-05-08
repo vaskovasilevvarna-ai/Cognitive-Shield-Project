@@ -1,3 +1,3 @@
 """
-Agent Communication Protocol (ACP) package placeholder for Sprint 0.
+Agent Communication Protocol (ACP) package for Cognitive Shield.
 """
