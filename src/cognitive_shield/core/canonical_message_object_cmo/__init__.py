@@ -1,3 +1,3 @@
 """
-Canonical Message Object (CMO) package placeholder for Sprint 0.
+Canonical Message Object (CMO) package for Cognitive Shield.
 """
