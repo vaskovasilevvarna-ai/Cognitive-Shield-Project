@@ -1,7 +1,7 @@
 """
-Core Input package for Cognitive Shield.
+Shield Core package for Cognitive Shield.
 
-This package is a Sprint 1 bounded scaffold. It does not implement real input
-normalization, transcript parsing, language routing, ingestion behavior, or
-downstream pipeline logic.
+This package contains bounded core module scaffolds and future Shield Core
+implementation areas. It does not introduce cross-module pipeline execution by
+itself.
 """
