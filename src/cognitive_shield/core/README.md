@@ -1,77 +1,41 @@
-# Core Input
+# Shield Core
 
-Status: Sprint 1 bounded scaffold.
+Status: Sprint 1 bounded scaffold area.
 
 ## Purpose
 
-This folder contains the future implementation area for core Input handling.
+This folder contains the bounded Shield Core module areas for Cognitive Shield.
 
-The Input layer is intended to become the entry point for raw text, transcript, or message input before Message Decomposition Specification (MDS).
+Shield Core modules are opened and developed through separate control passes, scaffold files, narrow tests, and closure notes.
 
-Its role is to prepare a future normalized input envelope without performing analysis, decomposition, taxonomy classification, risk scoring, governance decisions, output rendering, or downstream pipeline execution.
+## Current Sprint 1 Core Scaffolds
 
-## Sprint 1 Role
+Current bounded scaffold work includes:
 
-During Sprint 1, this module is opened only as a bounded scaffold.
+- Message Decomposition Specification (MDS)
+- Canonical Message Object (CMO)
+- Agent Communication Protocol (ACP)
+- Analysis
+- Input
 
-The current role is to establish:
+## Boundary Rule
 
-- module boundary;
-- package identity;
-- future file map;
-- implementation non-scope;
-- no-drift constraints.
+This folder does not authorize cross-module runtime pipeline execution by itself.
 
-## Intended Future Files
+Each module remains bounded until a separate control pass admits behavior.
 
-Expected future files:
+## No-Drift Confirmation
 
-- `schemas.py`
-- `contracts.py`
-- `validator.py`
-- `normalizer.py`
+Confirmed:
 
-These files should be opened only through separate control passes.
-
-## Current Non-Scope
-
-This module must not yet implement:
-
-- real input normalization;
-- transcript parsing;
-- language routing;
-- source-type inference;
-- ingestion pipeline behavior;
-- Message Decomposition Specification (MDS) behavior;
-- Canonical Message Object (CMO) construction;
-- Agent Communication Protocol (ACP) routing;
-- Analysis behavior;
-- taxonomy behavior;
-- risk scoring;
-- governance behavior;
-- output generation;
-- end-to-end pipeline execution.
-
-## Boundary Rules
-
-Input must preserve:
-
-- raw input boundary;
-- explicit language field discipline;
-- no hidden analysis;
-- no decomposition behavior;
-- no downstream pipeline shortcuts.
-
-## Integration Position
-
-Expected future position:
-
-Raw input → Input envelope → Message Decomposition Specification (MDS).
-
-During Sprint 1, this README does not authorize full implementation of that flow.
+- no downstream pipeline logic is introduced by this README;
+- no real analysis behavior is introduced;
+- no risk scoring is introduced;
+- no governance behavior is introduced;
+- no output rendering is introduced.
 
 ## Verdict
 
-Input is open as a bounded scaffold.
+Shield Core remains a bounded module area.
 
-Real input processing behavior is not yet admitted.
+Runtime pipeline behavior is not yet admitted.
