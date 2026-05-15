@@ -1,9 +1,10 @@
 """
 Core Input normalizer scaffold for Cognitive Shield.
 
-This module is a Sprint 1 bounded scaffold. It does not implement real input
-normalization, transcript parsing, language routing, ingestion behavior, or
-downstream pipeline logic.
+This module is a Sprint 1 bounded scaffold with one admitted minimal
+Input-side behavior. It does not implement transcript parsing, language routing,
+source-type inference, ingestion behavior, Message Decomposition Specification
+(MDS) behavior, runtime pipeline execution, or downstream pipeline logic.
 """
 
 from cognitive_shield.core.input.contracts import InputMessage
@@ -24,6 +25,23 @@ def build_input_normalization_preview(message: InputMessage) -> dict[str, str]:
     }
 
 
+def prepare_input_message_minimal(message: InputMessage) -> InputMessage:
+    """
+    Prepare an InputMessage with minimal local Input-side behavior.
+
+    This function trims leading and trailing whitespace from raw_text while
+    preserving message_id and language. It does not route languages, infer
+    source types, call MDS modules, create decomposition fields, or execute
+    downstream pipeline behavior.
+    """
+    return InputMessage(
+        message_id=message.message_id,
+        raw_text=message.raw_text.strip(),
+        language=message.language,
+    )
+
+
 __all__ = [
     "build_input_normalization_preview",
+    "prepare_input_message_minimal",
 ]
