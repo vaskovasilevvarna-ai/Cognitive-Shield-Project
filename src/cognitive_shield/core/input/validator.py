@@ -13,13 +13,13 @@ def is_valid_input_source(message: InputMessage) -> bool:
     """
     Check whether an InputMessage has minimal source fields.
 
-    This is a scaffold-level check only. It does not normalize input, parse
-    transcripts, route languages, infer source types, or execute downstream
-    pipeline behavior.
+    This is a bounded Input-side check only. It does not normalize input, parse
+    transcripts, route languages, infer source types, call MDS modules, or
+    execute downstream pipeline behavior.
     """
     return bool(
         message.message_id
-        and message.raw_text
+        and message.raw_text.strip()
         and message.language
     )
 
