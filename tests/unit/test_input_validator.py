@@ -24,3 +24,14 @@ def test_is_valid_input_source_rejects_empty_required_fields() -> None:
     )
 
     assert is_valid_input_source(message) is False
+
+
+def test_is_valid_input_source_rejects_whitespace_only_raw_text() -> None:
+    """Input validator scaffold rejects raw_text with whitespace only."""
+    message = InputMessage(
+        message_id="msg-001",
+        raw_text="   ",
+        language="en",
+    )
+
+    assert is_valid_input_source(message) is False
