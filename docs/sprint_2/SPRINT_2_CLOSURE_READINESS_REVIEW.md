@@ -56,3 +56,4 @@ Input behavior nucleus
 → CMO minimal object
 → CMO bounded construction candidate
 → ACP boundary eligibility
+```md
