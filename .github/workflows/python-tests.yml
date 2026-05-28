@@ -34,14 +34,6 @@ jobs:
         run: |
           python -m compileall src tests
 
-      - name: Run Sprint 1 and Sprint 2 admitted tests
+      - name: Run admitted unit, contract, and smoke tests
         run: |
-          python -m pytest \
-            tests/unit/test_input_normalizer.py \
-            tests/unit/test_input_validator.py \
-            tests/unit/test_input_readiness.py \
-            tests/unit/test_input_to_mds_preview.py \
-            tests/unit/test_mds_to_cmo_preview.py \
-            tests/unit/test_cmo_to_acp_preview.py \
-            tests/unit/test_acp_to_analysis_preview.py \
-            tests/unit/test_mds_surface_preparation.py
+          python -m pytest tests/unit tests/contract tests/smoke
