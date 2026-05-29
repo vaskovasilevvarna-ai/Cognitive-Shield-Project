@@ -1,0 +1,10 @@
+{
+  "message_id": "fixture-mixed-001",
+  "raw_text": "Officials said the measure is temporary, but several commentators described it as a dangerous precedent and urged immediate public resistance.",
+  "language": "en",
+  "source_type": "test_fixture",
+  "timestamp": null,
+  "metadata": {
+    "fixture_type": "mixed_signal_message"
+  }
+}

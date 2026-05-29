@@ -1,0 +1,10 @@
+{
+  "message_id": "fixture-ambiguity-001",
+  "raw_text": "Some observers suggested that the announcement might indicate broader institutional changes, although the official statement did not clearly confirm that interpretation.",
+  "language": "en",
+  "source_type": "test_fixture",
+  "timestamp": null,
+  "metadata": {
+    "fixture_type": "ambiguity_heavy_message"
+  }
+}

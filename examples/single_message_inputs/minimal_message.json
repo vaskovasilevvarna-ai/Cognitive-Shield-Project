@@ -1,0 +1,7 @@
+{
+  "id": "minimal-message-001",
+  "language": "en",
+  "input_type": "single_message",
+  "content": "This is a minimal Sprint 0 example input for a future single-message Cognitive Shield pass.",
+  "notes": "Placeholder example only. Not a benchmark, not a scenario library, and not a real evaluation fixture."
+}

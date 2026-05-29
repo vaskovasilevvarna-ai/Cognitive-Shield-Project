@@ -1,0 +1,104 @@
+"""Unit tests for shared input contracts."""
+
+from cognitive_shield.shared.contracts.input_contracts import (
+    ClaimUnit,
+    ContextCarrier,
+    FramingUnit,
+    InputMessage,
+    RelationObject,
+    SurfaceSegment,
+)
+
+
+def test_input_message_can_be_created_with_minimal_fields() -> None:
+    """InputMessage can be constructed with the required minimal fields."""
+    message = InputMessage(
+        message_id="msg-001",
+        raw_text="This is a minimal test message.",
+        language="en",
+    )
+
+    assert message.message_id == "msg-001"
+    assert message.raw_text == "This is a minimal test message."
+    assert message.language == "en"
+    assert message.source_type is None
+    assert message.timestamp is None
+    assert message.metadata == {}
+
+
+def test_surface_segment_can_be_created_with_offsets() -> None:
+    """SurfaceSegment can be constructed with text boundaries."""
+    segment = SurfaceSegment(
+        segment_id="seg-001",
+        text="This is a segment.",
+        start_offset=0,
+        end_offset=18,
+    )
+
+    assert segment.segment_id == "seg-001"
+    assert segment.text == "This is a segment."
+    assert segment.start_offset == 0
+    assert segment.end_offset == 18
+
+
+def test_claim_unit_can_be_created_with_required_fields() -> None:
+    """ClaimUnit can be constructed with required claim fields."""
+    claim = ClaimUnit(
+        claim_id="claim-001",
+        text="The system should preserve uncertainty.",
+        source_segment_ids=["seg-001"],
+        claim_type="assertion",
+        explicitness="explicit",
+    )
+
+    assert claim.claim_id == "claim-001"
+    assert claim.text == "The system should preserve uncertainty."
+    assert claim.source_segment_ids == ["seg-001"]
+    assert claim.claim_type == "assertion"
+    assert claim.explicitness == "explicit"
+    assert claim.uncertainty_flags == []
+
+
+def test_framing_unit_can_be_created_with_required_fields() -> None:
+    """FramingUnit can be constructed with required framing fields."""
+    framing = FramingUnit(
+        framing_id="frame-001",
+        text="This is a framing signal.",
+        framing_mode="urgency",
+        source_segment_ids=["seg-001"],
+    )
+
+    assert framing.framing_id == "frame-001"
+    assert framing.text == "This is a framing signal."
+    assert framing.framing_mode == "urgency"
+    assert framing.source_segment_ids == ["seg-001"]
+
+
+def test_relation_object_can_be_created_with_required_fields() -> None:
+    """RelationObject can be constructed with required relation fields."""
+    relation = RelationObject(
+        relation_id="rel-001",
+        relation_type="supports",
+        from_unit_id="claim-001",
+        to_unit_id="claim-002",
+    )
+
+    assert relation.relation_id == "rel-001"
+    assert relation.relation_type == "supports"
+    assert relation.from_unit_id == "claim-001"
+    assert relation.to_unit_id == "claim-002"
+
+
+def test_context_carrier_can_be_created_with_default_links() -> None:
+    """ContextCarrier can be constructed with default linked unit IDs."""
+    context = ContextCarrier(
+        context_id="ctx-001",
+        context_type="source_context",
+        value="Minimal contextual information.",
+    )
+
+    assert context.context_id == "ctx-001"
+    assert context.context_type == "source_context"
+    assert context.value == "Minimal contextual information."
+    assert context.linked_unit_ids == []
+
