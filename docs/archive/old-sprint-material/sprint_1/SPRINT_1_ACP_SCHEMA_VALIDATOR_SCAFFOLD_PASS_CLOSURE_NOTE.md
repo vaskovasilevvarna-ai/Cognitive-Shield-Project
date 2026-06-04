@@ -1,91 +1,63 @@
-# Sprint 1 ACP Contract Boundary Pass Closure Note
+# Sprint 1 ACP Schema Validator Scaffold Pass Closure Note
 
-Status: Closed — Agent Communication Protocol (ACP) contract boundary scaffold pass.
+Status: Closed — Agent Communication Protocol (ACP) schema validator scaffold pass.
 
 ## Scope
 
-This note closes the bounded Sprint 1 pass for the Agent Communication Protocol (ACP) contract boundary scaffold.
+This note closes the bounded Sprint 1 pass for the Agent Communication Protocol (ACP) schema validator scaffold.
 
-The pass was limited to adding a minimal `contracts.py` scaffold with typed protocol container contracts and adding narrow unit tests for those contracts.
+The pass was limited to adding a minimal `schema_validator.py` scaffold that builds a validation preview from an `ACPMessage`, and adding a narrow unit test for that scaffold.
 
-No real Agent Communication Protocol (ACP) routing, orchestration, contradiction registration, uncertainty propagation, synthesis export, analysis execution, governance behavior or downstream pipeline logic was introduced.
+No real schema validation engine, ACP routing, agent orchestration, governance behavior, analysis execution, or downstream pipeline behavior was introduced.
 
 ## Files Added
 
-Added:
-
-- `src/cognitive_shield/core/agent_communication_protocol_acp/contracts.py`
-- `tests/unit/test_acp_contracts.py`
-
-Previously prepared in this ACP scaffold entry:
-
-- `src/cognitive_shield/core/agent_communication_protocol_acp/__init__.py`
-- `src/cognitive_shield/core/agent_communication_protocol_acp/README.md`
-- `src/cognitive_shield/core/agent_communication_protocol_acp/schemas.py`
-- `tests/unit/test_acp_schemas.py`
+- `src/cognitive_shield/core/agent_communication_protocol_acp/schema_validator.py`
+- `tests/unit/test_acp_schema_validator.py`
 
 ## What Was Added
 
-The Agent Communication Protocol (ACP) module now has a minimal contract boundary scaffold with:
+The ACP module now has a minimal schema validator scaffold:
 
-- `ACPMessage`
-- `ACPBundle`
+- `build_schema_validation_preview`
 
-These are typed scaffold contracts only.
+The function returns only:
 
-They do not implement routing, orchestration, protocol state, contradiction handling, uncertainty propagation or synthesis export.
+- `message_id`
+- `message_type`
+- `validation_status`
+
+from an `ACPMessage`.
+
+This is a scaffold-level validation preview helper only.
 
 ## Testing Added
 
-The unit test verifies:
+The unit test verifies that `build_schema_validation_preview` returns the expected minimal validation preview.
 
-- `ACPMessage` construction with required envelope fields;
-- `ACPBundle` construction with default container fields.
-
-The test does not validate ACP routing or orchestration behavior.
+The test does not validate real Schema Validator behavior.
 
 ## No-Drift Confirmation
 
 Confirmed:
 
-- no real Agent Communication Protocol (ACP) routing was introduced;
+- no real schema validation engine was introduced;
+- no real ACP routing was introduced;
 - no agent orchestration was introduced;
-- no agent-to-agent messaging engine was introduced;
+- no message dispatch was introduced;
+- no protocol state machine was introduced;
 - no Scope Guard behavior was introduced;
-- no Schema Validator behavior was introduced;
 - no Contradiction Registrar behavior was introduced;
 - no Uncertainty Propagator behavior was introduced;
 - no Synthesis Exporter behavior was introduced;
 - no analysis execution was introduced;
 - no risk scoring was introduced;
-- no confidence or uncertainty evaluation was introduced;
-- no Internal Arbiter (IA) behavior was introduced;
-- no Decision Policy Layer (DPL) behavior was introduced;
-- no Shield Decision (SD) behavior was introduced;
+- no governance behavior was introduced;
 - no output generation was introduced;
-- no end-to-end pipeline execution was introduced;
 - no downstream pipeline logic was introduced.
-
-## Testing Discipline
-
-The ACP contract boundary test was added only after the `contracts.py` scaffold shape was explicitly admitted through a fresh control pass.
-
-The test verifies contract construction only.
-
-It does not test ACP routing, orchestration or protocol behavior.
 
 ## Verdict
 
-The ACP contract boundary scaffold pass is closed.
+The ACP schema validator scaffold pass is closed.
 
-Agent Communication Protocol (ACP) now has:
-
-- package identity;
-- README boundary;
-- schema boundary scaffold;
-- contract boundary scaffold;
-- narrow tests for schema identity and contract construction.
-
-Broad ACP routing, orchestration and protocol behavior are still not admitted.
-
-The next ACP step should begin with a fresh control pass before opening `router.py`, `scope_guard.py`, `schema_validator.py`, `contradiction_registrar.py`, `uncertainty_propagator.py`, or `synthesis_exporter.py`.
+The next ACP step should begin with a fresh control pass before opening `contradiction_registrar.py`, `uncertainty_propagator.py`, or `synthesis_exporter.py`.
