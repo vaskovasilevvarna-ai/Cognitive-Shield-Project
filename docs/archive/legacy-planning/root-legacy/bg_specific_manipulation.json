@@ -1,0 +1,69 @@
+{
+   "version":"1.0.0",
+   "last_updated":"2026-02-03",
+   "fallacies":[
+      {
+         "id":"ad_hominem",
+         "name_bg":"Ad Hominem (Атака срещу личността)",
+         "name_en":"Ad Hominem",
+         "description":"Атакуване на характера или личните качества на опонента, вместо да се опровергае неговият аргумент.",
+         "detection_rules":{
+            "keywords":[
+               "ти си",
+               "известен с",
+               "платен",
+               "доказан лъжец",
+               "некомпетентен"
+            ],
+            "nlp_patterns":[
+               "personal_attack_vector",
+               "character_assassination"
+            ]
+         },
+         "examples":[
+            "Няма смисъл да слушаме експерта, защото той е работил за чужда компания преди 10 години."
+         ],
+         "severity":"high"
+      },
+      {
+         "id":"straw_man",
+         "name_bg":"Сламен човек",
+         "name_en":"Straw Man",
+         "description":"Изопачаване или преувеличаване на аргумента на опонента, за да бъде по-лесно атакуван.",
+         "detection_rules":{
+            "keywords":[
+               "значи твърдите, че",
+               "според вас излиза, че",
+               "искате да кажете"
+            ],
+            "nlp_patterns":[
+               "misrepresentation_of_intent"
+            ]
+         },
+         "examples":[
+            "– Трябва да намалим бюджета за отбрана. – Значи вие искате да оставите страната ни напълно беззащитна!"
+         ],
+         "severity":"medium"
+      },
+      {
+         "id":"appeal_to_emotion",
+         "name_bg":"Апел към емоциите",
+         "name_en":"Appeal to Emotion",
+         "description":"Използване на силно зареден език за предизвикване на страх, гняв или съжаление, вместо логическо доказателство.",
+         "detection_rules":{
+            "keywords":[
+               "помислете за децата",
+               "шок",
+               "ужас",
+               "национално предателство",
+               "жълтопаветници",
+               "сглобка"
+            ],
+            "nlp_patterns":[
+               "emotional_trigger_detection"
+            ]
+         },
+         "severity":"medium"
+      }
+   ]
+}
