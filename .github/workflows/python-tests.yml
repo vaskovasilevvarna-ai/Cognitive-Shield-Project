@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - active/mvp-foundation
+      - post-mvp/repo-cleanup
       - main
   pull_request:
     branches:
