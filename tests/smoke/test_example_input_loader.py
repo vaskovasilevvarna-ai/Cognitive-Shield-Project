@@ -7,7 +7,8 @@ from cognitive_shield.app.example_input_loader import (
 )
 
 
-EXAMPLE_PATH = Path("examples/minimal_message.json")
+REPO_ROOT = Path(__file__).resolve().parents[2]
+EXAMPLE_PATH = REPO_ROOT / "examples" / "minimal_message.json"
 
 
 def test_load_single_message_example_reads_controlled_fixture() -> None:
