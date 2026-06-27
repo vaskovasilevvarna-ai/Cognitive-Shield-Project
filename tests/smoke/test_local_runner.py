@@ -1,3 +1,5 @@
+from pathlib import Path
+
 from cognitive_shield.app.local_runner import (
     RUNNER_MODE,
     RUNNER_STATUS,
@@ -15,7 +17,9 @@ def test_run_default_local_prototype_returns_structured_output() -> None:
 
     assert result["runner_status"] == RUNNER_STATUS
     assert result["runner_mode"] == RUNNER_MODE
-    assert result["input_source"] == "examples/single_message_inputs/minimal_message.json"
+
+    expected_input_source = Path("examples") / "single_message_inputs" / "minimal_message.json"
+    assert Path(result["input_source"]) == expected_input_source
 
     engine_output = result["engine_output"]
 
