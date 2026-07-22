@@ -18,6 +18,7 @@ from cognitive_shield.app.mvp_functional_proof import run_mvp_functional_proof
 
 ENGINE_STAGE = "functional_local_prototype_engine_entry"
 RUNTIME_MODE = "local_bounded_prototype"
+PROCESSING_STATUS = "bounded_mvp_functional_proof_completed"
 
 
 def run_functional_local_engine(input_text: str) -> dict[str, Any]:
@@ -34,6 +35,7 @@ def run_functional_local_engine(input_text: str) -> dict[str, Any]:
         "engine_stage": ENGINE_STAGE,
         "runtime_mode": RUNTIME_MODE,
         "engine_status": "functional_local_engine_entry_created",
+        "processing_status": PROCESSING_STATUS,
         "input_status": proof_result.get("input_status", ""),
         "mvp_proof_status": proof_result.get("mvp_proof_status", ""),
         "analysis_status": "not_implemented",
@@ -46,6 +48,7 @@ def run_functional_local_engine(input_text: str) -> dict[str, Any]:
 
 __all__ = [
     "ENGINE_STAGE",
+    "PROCESSING_STATUS",
     "RUNTIME_MODE",
     "run_functional_local_engine",
 ]
