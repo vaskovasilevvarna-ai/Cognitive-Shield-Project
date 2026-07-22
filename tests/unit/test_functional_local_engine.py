@@ -1,5 +1,6 @@
 from cognitive_shield.app.functional_local_engine import (
     ENGINE_STAGE,
+    PROCESSING_STATUS,
     RUNTIME_MODE,
     run_functional_local_engine,
 )
@@ -11,6 +12,7 @@ def test_run_functional_local_engine_returns_bounded_engine_envelope() -> None:
     assert result["engine_stage"] == ENGINE_STAGE
     assert result["runtime_mode"] == RUNTIME_MODE
     assert result["engine_status"] == "functional_local_engine_entry_created"
+    assert result["processing_status"] == PROCESSING_STATUS
 
     assert result["input_status"] == "input_received"
     assert result["mvp_proof_status"] == "mvp_functional_proof_created"
@@ -42,3 +44,5 @@ def test_run_functional_local_engine_does_not_claim_downstream_decisions() -> No
     assert "risk_score" not in proof_result
     assert "confidence" not in proof_result
     assert "verdict" not in proof_result
+
+  

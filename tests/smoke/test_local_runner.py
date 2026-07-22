@@ -31,6 +31,7 @@ def test_run_default_local_prototype_returns_structured_output() -> None:
 
     assert engine_result["engine_stage"] == "functional_local_prototype_engine_entry"
     assert engine_result["runtime_mode"] == "local_bounded_prototype"
+    assert engine_result["processing_status"] == "bounded_mvp_functional_proof_completed"
     assert engine_result["analysis_status"] == "not_implemented"
     assert engine_result["risk_status"] == "not_evaluated"
     assert engine_result["confidence_status"] == "not_computed"
@@ -39,3 +40,6 @@ def test_run_default_local_prototype_returns_structured_output() -> None:
     assert "risk_score" not in engine_result
     assert "confidence" not in engine_result
     assert "verdict" not in engine_result
+
+
+
