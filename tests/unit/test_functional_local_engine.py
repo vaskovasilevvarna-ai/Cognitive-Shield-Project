@@ -1,4 +1,5 @@
 from cognitive_shield.app.functional_local_engine import (
+    ANALYSIS_ENVELOPE_STATUS,
     ENGINE_STAGE,
     PROCESSING_STATUS,
     RUNTIME_MODE,
@@ -17,6 +18,7 @@ EXPECTED_ENGINE_RESULT_KEYS = {
     "cmo_status",
     "acp_boundary_status",
     "routing_result_status",
+    "analysis_envelope_status",
     "analysis_status",
     "risk_status",
     "confidence_status",
@@ -57,6 +59,7 @@ def test_run_functional_local_engine_returns_bounded_engine_envelope() -> None:
     assert result["acp_boundary_status"] == "eligible_for_acp_boundary"
     assert result["routing_result_status"] == "route_ready_no_dispatch"
 
+    assert result["analysis_envelope_status"] == ANALYSIS_ENVELOPE_STATUS
     assert result["analysis_status"] == "not_implemented"
     assert result["risk_status"] == "not_evaluated"
     assert result["confidence_status"] == "not_computed"
