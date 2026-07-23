@@ -13,6 +13,10 @@ EXPECTED_ENGINE_RESULT_KEYS = {
     "processing_status",
     "input_status",
     "mvp_proof_status",
+    "decomposition_result_status",
+    "cmo_status",
+    "acp_boundary_status",
+    "routing_result_status",
     "analysis_status",
     "risk_status",
     "confidence_status",
@@ -48,6 +52,10 @@ def test_run_functional_local_engine_returns_bounded_engine_envelope() -> None:
 
     assert result["input_status"] == "input_received"
     assert result["mvp_proof_status"] == "mvp_functional_proof_created"
+    assert result["decomposition_result_status"] == "decomposition_result_created"
+    assert result["cmo_status"] == "bounded_cmo_construction_created"
+    assert result["acp_boundary_status"] == "eligible_for_acp_boundary"
+    assert result["routing_result_status"] == "route_ready_no_dispatch"
 
     assert result["analysis_status"] == "not_implemented"
     assert result["risk_status"] == "not_evaluated"
