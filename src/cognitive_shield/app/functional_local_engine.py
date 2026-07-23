@@ -38,6 +38,13 @@ def run_functional_local_engine(input_text: str) -> dict[str, Any]:
         "processing_status": PROCESSING_STATUS,
         "input_status": proof_result.get("input_status", ""),
         "mvp_proof_status": proof_result.get("mvp_proof_status", ""),
+        "decomposition_result_status": proof_result.get(
+            "decomposition_result_status",
+            "",
+        ),
+        "cmo_status": proof_result.get("cmo_status", ""),
+        "acp_boundary_status": proof_result.get("acp_boundary_status", ""),
+        "routing_result_status": proof_result.get("routing_result_status", ""),
         "analysis_status": "not_implemented",
         "risk_status": "not_evaluated",
         "confidence_status": "not_computed",
