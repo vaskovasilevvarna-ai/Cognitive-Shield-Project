@@ -6,6 +6,38 @@ from cognitive_shield.app.functional_local_engine import (
 )
 
 
+EXPECTED_ENGINE_RESULT_KEYS = {
+    "engine_stage",
+    "runtime_mode",
+    "engine_status",
+    "processing_status",
+    "input_status",
+    "mvp_proof_status",
+    "analysis_status",
+    "risk_status",
+    "confidence_status",
+    "verdict_status",
+    "proof_result",
+}
+
+FORBIDDEN_DOWNSTREAM_KEYS = {
+    "risk_score",
+    "confidence",
+    "verdict",
+    "shield_decision",
+    "taxonomy_labels",
+    "evidence_analysis",
+    "narrative_analysis",
+    "cognitive_analysis",
+}
+
+
+def test_run_functional_local_engine_returns_expected_top_level_contract() -> None:
+    result = run_functional_local_engine("Bounded local prototype test input.")
+
+    assert set(result) == EXPECTED_ENGINE_RESULT_KEYS
+
+
 def test_run_functional_local_engine_returns_bounded_engine_envelope() -> None:
     result = run_functional_local_engine("Bounded local prototype test input.")
 
@@ -35,14 +67,12 @@ def test_run_functional_local_engine_returns_bounded_engine_envelope() -> None:
 def test_run_functional_local_engine_does_not_claim_downstream_decisions() -> None:
     result = run_functional_local_engine("Bounded local prototype test input.")
 
-    assert "risk_score" not in result
-    assert "confidence" not in result
-    assert "verdict" not in result
+    for key in FORBIDDEN_DOWNSTREAM_KEYS:
+        assert key not in result
 
     proof_result = result["proof_result"]
 
-    assert "risk_score" not in proof_result
-    assert "confidence" not in proof_result
-    assert "verdict" not in proof_result
+    for key in FORBIDDEN_DOWNSTREAM_KEYS:
+        assert key not in proof_result
 
   
