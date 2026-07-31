@@ -20,6 +20,9 @@ ENGINE_STAGE = "functional_local_prototype_engine_entry"
 RUNTIME_MODE = "local_bounded_prototype"
 PROCESSING_STATUS = "bounded_mvp_functional_proof_completed"
 ANALYSIS_ENVELOPE_STATUS = "bounded_analysis_envelope_ready"
+RISK_ENVELOPE_STATUS = "bounded_risk_envelope_ready"
+CONFIDENCE_ENVELOPE_STATUS = "bounded_confidence_envelope_ready"
+DECISION_ENVELOPE_STATUS = "bounded_decision_envelope_ready"
 
 
 def run_functional_local_engine(input_text: str) -> dict[str, Any]:
@@ -47,6 +50,9 @@ def run_functional_local_engine(input_text: str) -> dict[str, Any]:
         "acp_boundary_status": proof_result.get("acp_boundary_status", ""),
         "routing_result_status": proof_result.get("routing_result_status", ""),
         "analysis_envelope_status": ANALYSIS_ENVELOPE_STATUS,
+        "risk_envelope_status": RISK_ENVELOPE_STATUS,
+        "confidence_envelope_status": CONFIDENCE_ENVELOPE_STATUS,
+        "decision_envelope_status": DECISION_ENVELOPE_STATUS,
         "analysis_status": "not_implemented",
         "risk_status": "not_evaluated",
         "confidence_status": "not_computed",
@@ -57,8 +63,11 @@ def run_functional_local_engine(input_text: str) -> dict[str, Any]:
 
 __all__ = [
     "ANALYSIS_ENVELOPE_STATUS",
+    "CONFIDENCE_ENVELOPE_STATUS",
+    "DECISION_ENVELOPE_STATUS",
     "ENGINE_STAGE",
     "PROCESSING_STATUS",
+    "RISK_ENVELOPE_STATUS",
     "RUNTIME_MODE",
     "run_functional_local_engine",
 ]
