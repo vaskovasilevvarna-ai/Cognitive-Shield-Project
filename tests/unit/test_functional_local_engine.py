@@ -1,7 +1,10 @@
 from cognitive_shield.app.functional_local_engine import (
     ANALYSIS_ENVELOPE_STATUS,
+    CONFIDENCE_ENVELOPE_STATUS,
+    DECISION_ENVELOPE_STATUS,
     ENGINE_STAGE,
     PROCESSING_STATUS,
+    RISK_ENVELOPE_STATUS,
     RUNTIME_MODE,
     run_functional_local_engine,
 )
@@ -19,6 +22,9 @@ EXPECTED_ENGINE_RESULT_KEYS = {
     "acp_boundary_status",
     "routing_result_status",
     "analysis_envelope_status",
+    "risk_envelope_status",
+    "confidence_envelope_status",
+    "decision_envelope_status",
     "analysis_status",
     "risk_status",
     "confidence_status",
@@ -28,9 +34,12 @@ EXPECTED_ENGINE_RESULT_KEYS = {
 
 FORBIDDEN_DOWNSTREAM_KEYS = {
     "risk_score",
+    "risk_level",
     "confidence",
+    "confidence_score",
     "verdict",
     "shield_decision",
+    "decision",
     "taxonomy_labels",
     "evidence_analysis",
     "narrative_analysis",
@@ -60,6 +69,10 @@ def test_run_functional_local_engine_returns_bounded_engine_envelope() -> None:
     assert result["routing_result_status"] == "route_ready_no_dispatch"
 
     assert result["analysis_envelope_status"] == ANALYSIS_ENVELOPE_STATUS
+    assert result["risk_envelope_status"] == RISK_ENVELOPE_STATUS
+    assert result["confidence_envelope_status"] == CONFIDENCE_ENVELOPE_STATUS
+    assert result["decision_envelope_status"] == DECISION_ENVELOPE_STATUS
+
     assert result["analysis_status"] == "not_implemented"
     assert result["risk_status"] == "not_evaluated"
     assert result["confidence_status"] == "not_computed"
